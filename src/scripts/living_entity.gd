@@ -1,7 +1,7 @@
 class_name LivingEntity
 extends CharacterBody2D
 
-signal damage_taken
+signal damage_taken(old_health, new_health)
 signal killed
 
 @export var MAX_HEALTH = 100
