@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfcmpwkhi407h"]
+
+[ext_resource type="PackedScene" uid="uid://captmg0a2w0ym" path="res://scenes/player.tscn" id="1_ex6fr"]
+[ext_resource type="Texture2D" uid="uid://dsaqn0sfkg1dj" path="res://textures/test_entity.png" id="1_ya8vt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcddu"]
+size = Vector2(167, 20)
+
+[node name="test_level" type="Node2D"]
+
+[node name="world" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="collider" type="CollisionShape2D" parent="world"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_rcddu")
+
+[node name="sprite" type="Sprite2D" parent="world"]
+texture_filter = 1
+position = Vector2(-0.499999, 0.500001)
+scale = Vector2(2.60938, 0.296875)
+texture = ExtResource("1_ya8vt")
+
+[node name="player" parent="." instance=ExtResource("1_ex6fr")]
+position = Vector2(-38, -22)
+
+[node name="Camera2D" type="Camera2D" parent="."]
