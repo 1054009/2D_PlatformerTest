@@ -2,7 +2,7 @@ class_name living_entity
 extends CharacterBody2D
 
 @export var MAX_HEALTH = 100
-var m_iHealth = 0
+var health = 0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
