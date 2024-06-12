@@ -1,4 +1,4 @@
-class_name living_entity
+class_name LivingEntity
 extends CharacterBody2D
 
 signal damage_taken

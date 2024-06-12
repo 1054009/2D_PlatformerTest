@@ -1,4 +1,4 @@
-extends living_entity
+extends LivingEntity
 
 @export var WALK_SPEED = 300.0
 @export var RUN_SPEED = 550.0
