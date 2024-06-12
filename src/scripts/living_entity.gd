@@ -6,7 +6,7 @@ var m_iHealth = 0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-func run_physics(delta):
+func run_physics(_delta):
 	pass
 
 func _physics_process(delta):

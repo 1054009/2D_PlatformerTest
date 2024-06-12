@@ -4,7 +4,7 @@ extends living_entity
 @export var RUN_SPEED = 550.0
 @export var JUMP_POWER = -400.0
 
-func run_physics(delta):
+func run_physics(_delta):
 	if Input.is_action_just_pressed("MOVE_JUMP") and is_on_floor():
 		velocity.y = JUMP_POWER
 
