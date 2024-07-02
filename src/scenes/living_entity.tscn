@@ -7,6 +7,8 @@
 size = Vector2(64, 64)
 
 [node name="living_entity" type="CharacterBody2D"]
+floor_constant_speed = true
+floor_snap_length = 10.0
 script = ExtResource("1_aw6ba")
 
 [node name="collider" type="CollisionShape2D" parent="."]
