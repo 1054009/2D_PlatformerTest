@@ -10,11 +10,52 @@ size = Vector2(167, 20)
 
 [node name="world" type="StaticBody2D" parent="."]
 
-[node name="collider" type="CollisionShape2D" parent="world"]
+[node name="platform001" type="StaticBody2D" parent="world"]
+
+[node name="collider" type="CollisionShape2D" parent="world/platform001"]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_rcddu")
 
-[node name="sprite" type="Sprite2D" parent="world"]
+[node name="sprite" type="Sprite2D" parent="world/platform001"]
+texture_filter = 1
+position = Vector2(-0.499999, 0.500001)
+scale = Vector2(2.60938, 0.296875)
+texture = ExtResource("1_ya8vt")
+
+[node name="platform002" type="StaticBody2D" parent="world"]
+position = Vector2(167, -20)
+
+[node name="collider" type="CollisionShape2D" parent="world/platform002"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_rcddu")
+
+[node name="sprite" type="Sprite2D" parent="world/platform002"]
+texture_filter = 1
+position = Vector2(-0.499999, 0.500001)
+scale = Vector2(2.60938, 0.296875)
+texture = ExtResource("1_ya8vt")
+
+[node name="platform003" type="StaticBody2D" parent="world"]
+position = Vector2(439, -20)
+
+[node name="collider" type="CollisionShape2D" parent="world/platform003"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_rcddu")
+
+[node name="sprite" type="Sprite2D" parent="world/platform003"]
+texture_filter = 1
+position = Vector2(-0.499999, 0.500001)
+scale = Vector2(2.60938, 0.296875)
+texture = ExtResource("1_ya8vt")
+
+[node name="platform004" type="StaticBody2D" parent="world"]
+position = Vector2(545, -96)
+
+[node name="collider" type="CollisionShape2D" parent="world/platform004"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_rcddu")
+
+[node name="sprite" type="Sprite2D" parent="world/platform004"]
 texture_filter = 1
 position = Vector2(-0.499999, 0.500001)
 scale = Vector2(2.60938, 0.296875)
