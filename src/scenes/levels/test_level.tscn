@@ -1,82 +1,102 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfcmpwkhi407h"]
+[gd_scene load_steps=7 format=3 uid="uid://cfcmpwkhi407h"]
 
 [ext_resource type="Texture2D" uid="uid://dsaqn0sfkg1dj" path="res://textures/test_entity.png" id="1_trn7y"]
+[ext_resource type="Texture2D" uid="uid://g0acj5e7ie2i" path="res://textures/tiles/test.png" id="2_6fa7j"]
 [ext_resource type="PackedScene" uid="uid://captmg0a2w0ym" path="res://scenes/player.tscn" id="2_a5xvo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rcddu"]
 size = Vector2(167, 20)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ndotf"]
+texture = ExtResource("2_6fa7j")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o5ns3"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_ndotf")
+
 [node name="test_level" type="Node2D"]
 
 [node name="world" type="StaticBody2D" parent="."]
 
-[node name="platform001" type="StaticBody2D" parent="world"]
+[node name="generic_platforms" type="Node2D" parent="world"]
 
-[node name="collider" type="CollisionShape2D" parent="world/platform001"]
+[node name="platform001" type="StaticBody2D" parent="world/generic_platforms"]
+
+[node name="collider" type="CollisionShape2D" parent="world/generic_platforms/platform001"]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_rcddu")
 
-[node name="sprite" type="Sprite2D" parent="world/platform001"]
+[node name="sprite" type="Sprite2D" parent="world/generic_platforms/platform001"]
 texture_filter = 1
 position = Vector2(-0.499999, 0.500001)
 scale = Vector2(2.60938, 0.296875)
 texture = ExtResource("1_trn7y")
 
-[node name="platform002" type="StaticBody2D" parent="world"]
+[node name="platform002" type="StaticBody2D" parent="world/generic_platforms"]
 position = Vector2(167, -20)
 
-[node name="collider" type="CollisionShape2D" parent="world/platform002"]
+[node name="collider" type="CollisionShape2D" parent="world/generic_platforms/platform002"]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_rcddu")
 
-[node name="sprite" type="Sprite2D" parent="world/platform002"]
+[node name="sprite" type="Sprite2D" parent="world/generic_platforms/platform002"]
 texture_filter = 1
 position = Vector2(-0.499999, 0.500001)
 scale = Vector2(2.60938, 0.296875)
 texture = ExtResource("1_trn7y")
 
-[node name="platform003" type="StaticBody2D" parent="world"]
+[node name="platform003" type="StaticBody2D" parent="world/generic_platforms"]
 position = Vector2(439, -20)
 
-[node name="collider" type="CollisionShape2D" parent="world/platform003"]
+[node name="collider" type="CollisionShape2D" parent="world/generic_platforms/platform003"]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_rcddu")
 
-[node name="sprite" type="Sprite2D" parent="world/platform003"]
+[node name="sprite" type="Sprite2D" parent="world/generic_platforms/platform003"]
 texture_filter = 1
 position = Vector2(-0.499999, 0.500001)
 scale = Vector2(2.60938, 0.296875)
 texture = ExtResource("1_trn7y")
 
-[node name="platform004" type="StaticBody2D" parent="world"]
+[node name="platform004" type="StaticBody2D" parent="world/generic_platforms"]
 position = Vector2(654, -142)
 rotation = -0.763278
 scale = Vector2(2.04939, 1)
 
-[node name="collider" type="CollisionShape2D" parent="world/platform004"]
+[node name="collider" type="CollisionShape2D" parent="world/generic_platforms/platform004"]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_rcddu")
 
-[node name="sprite" type="Sprite2D" parent="world/platform004"]
+[node name="sprite" type="Sprite2D" parent="world/generic_platforms/platform004"]
 texture_filter = 1
 position = Vector2(-0.499999, 0.500001)
 scale = Vector2(2.60938, 0.296875)
 texture = ExtResource("1_trn7y")
 
-[node name="platform005" type="StaticBody2D" parent="world"]
+[node name="platform005" type="StaticBody2D" parent="world/generic_platforms"]
 position = Vector2(537, -384)
 rotation = 1.20785
 scale = Vector2(2.04939, 1)
 
-[node name="collider" type="CollisionShape2D" parent="world/platform005"]
+[node name="collider" type="CollisionShape2D" parent="world/generic_platforms/platform005"]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_rcddu")
 
-[node name="sprite" type="Sprite2D" parent="world/platform005"]
+[node name="sprite" type="Sprite2D" parent="world/generic_platforms/platform005"]
 texture_filter = 1
 position = Vector2(-0.499999, 0.500001)
 scale = Vector2(2.60938, 0.296875)
 texture = ExtResource("1_trn7y")
+
+[node name="tiles" type="TileMap" parent="world"]
+tile_set = SubResource("TileSet_o5ns3")
+format = 2
+layer_0/tile_data = PackedInt32Array(65531, 0, 0, 65530, 0, 0, 65529, 0, 0, 65528, 0, 0, 65527, 0, 0, 65526, 0, 0, 65525, 0, 0, 65524, 0, 0, 65523, 0, 0, 65522, 0, 0, 65521, 0, 0, 65520, 0, 0, 65519, 0, 0, 65518, 0, 0, 65517, 0, 0, 131053, 65536, 0, 131054, 65536, 0, 131055, 65536, 0, 131056, 65536, 0, 131057, 65536, 0, 131058, 65536, 0, 131059, 65536, 0, 131060, 65536, 0, 131061, 65536, 0, 131062, 65536, 0, 131063, 65536, 0, 131064, 65536, 0, 131065, 65536, 0, 131066, 65536, 0, 131067, 65536, 0, 196603, 65536, 0, 196602, 65536, 0, 196601, 65536, 0, 196600, 65536, 0, 196599, 65536, 0, 196598, 65536, 0, 196597, 65536, 0, 196596, 65536, 0, 196595, 65536, 0, 196594, 65536, 0, 196593, 65536, 0, 196592, 65536, 0, 196591, 65536, 0, 196590, 65536, 0, 196589, 65536, 0, 262125, 65536, 0, 262126, 65536, 0, 262127, 65536, 0, 262128, 65536, 0, 262129, 65536, 0, 262130, 65536, 0, 262131, 65536, 0, 262132, 65536, 0, 262133, 65536, 0, 262134, 65536, 0, 262135, 65536, 0, 262136, 65536, 0, 262137, 65536, 0, 262138, 65536, 0, 262139, 65536, 0, -131092, 0, 0, -131093, 0, 0, -131094, 0, 0, -131095, 0, 0, -131096, 0, 0, -131097, 0, 0, -131098, 0, 0, -131099, 0, 0, -65556, 65536, 0, -20, 65536, 0, 65516, 65536, 0, 131052, 65536, 0, 196588, 65536, 0, 262124, 65536, 0, 262123, 65536, 0, 262122, 65536, 0, 262121, 65536, 0, 262120, 65536, 0, 262119, 65536, 0, 262118, 65536, 0, 262117, 65536, 0, 196581, 65536, 0, 131045, 65536, 0, 65509, 65536, 0, -27, 65536, 0, -65563, 65536, 0, -65562, 65536, 0, -65561, 65536, 0, -65560, 65536, 0, -65559, 65536, 0, -65558, 65536, 0, -65557, 65536, 0, -21, 65536, 0, 65515, 65536, 0, -22, 65536, 0, -23, 65536, 0, -24, 65536, 0, -25, 65536, 0, -26, 65536, 0, 65510, 65536, 0, 131046, 65536, 0, 131047, 65536, 0, 131048, 65536, 0, 65513, 65536, 0, 65514, 65536, 0, 131051, 65536, 0, 131050, 65536, 0, 131049, 65536, 0, 65512, 65536, 0, 65511, 65536, 0, 196582, 65536, 0, 196583, 65536, 0, 196584, 65536, 0, 196585, 65536, 0, 196586, 65536, 0, 196587, 65536, 0, -15, 196608, 0, -196634, 196608, 0, -262170, 196608, 0, -262169, 196608, 0, -196633, 196608, 0)
 
 [node name="player" parent="." instance=ExtResource("2_a5xvo")]
 position = Vector2(-38, -22)
