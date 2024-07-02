@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cfcmpwkhi407h"]
 
-[ext_resource type="PackedScene" uid="uid://captmg0a2w0ym" path="res://scenes/player.tscn" id="1_ex6fr"]
-[ext_resource type="Texture2D" uid="uid://dsaqn0sfkg1dj" path="res://textures/test_entity.png" id="1_ya8vt"]
+[ext_resource type="Texture2D" uid="uid://dsaqn0sfkg1dj" path="res://textures/test_entity.png" id="1_trn7y"]
+[ext_resource type="PackedScene" uid="uid://captmg0a2w0ym" path="res://scenes/player.tscn" id="2_a5xvo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rcddu"]
 size = Vector2(167, 20)
@@ -20,7 +20,7 @@ shape = SubResource("RectangleShape2D_rcddu")
 texture_filter = 1
 position = Vector2(-0.499999, 0.500001)
 scale = Vector2(2.60938, 0.296875)
-texture = ExtResource("1_ya8vt")
+texture = ExtResource("1_trn7y")
 
 [node name="platform002" type="StaticBody2D" parent="world"]
 position = Vector2(167, -20)
@@ -33,7 +33,7 @@ shape = SubResource("RectangleShape2D_rcddu")
 texture_filter = 1
 position = Vector2(-0.499999, 0.500001)
 scale = Vector2(2.60938, 0.296875)
-texture = ExtResource("1_ya8vt")
+texture = ExtResource("1_trn7y")
 
 [node name="platform003" type="StaticBody2D" parent="world"]
 position = Vector2(439, -20)
@@ -46,7 +46,7 @@ shape = SubResource("RectangleShape2D_rcddu")
 texture_filter = 1
 position = Vector2(-0.499999, 0.500001)
 scale = Vector2(2.60938, 0.296875)
-texture = ExtResource("1_ya8vt")
+texture = ExtResource("1_trn7y")
 
 [node name="platform004" type="StaticBody2D" parent="world"]
 position = Vector2(654, -142)
@@ -61,7 +61,7 @@ shape = SubResource("RectangleShape2D_rcddu")
 texture_filter = 1
 position = Vector2(-0.499999, 0.500001)
 scale = Vector2(2.60938, 0.296875)
-texture = ExtResource("1_ya8vt")
+texture = ExtResource("1_trn7y")
 
 [node name="platform005" type="StaticBody2D" parent="world"]
 position = Vector2(537, -384)
@@ -76,9 +76,9 @@ shape = SubResource("RectangleShape2D_rcddu")
 texture_filter = 1
 position = Vector2(-0.499999, 0.500001)
 scale = Vector2(2.60938, 0.296875)
-texture = ExtResource("1_ya8vt")
+texture = ExtResource("1_trn7y")
 
-[node name="player" parent="." instance=ExtResource("1_ex6fr")]
+[node name="player" parent="." instance=ExtResource("2_a5xvo")]
 position = Vector2(-38, -22)
 
 [node name="camera" type="Camera2D" parent="player"]
