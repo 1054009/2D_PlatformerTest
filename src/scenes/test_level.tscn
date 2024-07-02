@@ -8,8 +8,7 @@ size = Vector2(167, 20)
 
 [node name="test_level" type="Node2D"]
 
-[node name="world" type="RigidBody2D" parent="."]
-freeze = true
+[node name="world" type="StaticBody2D" parent="."]
 
 [node name="collider" type="CollisionShape2D" parent="world"]
 position = Vector2(-0.5, 0)
